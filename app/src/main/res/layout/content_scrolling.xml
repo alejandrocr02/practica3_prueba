@@ -183,7 +183,7 @@
                     android:id="@+id/nombre4"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/PiqueN"
+                    android:text="@string/CR"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
                     app:layout_constraintTop_toBottomOf="@+id/img4"
 
@@ -193,7 +193,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@+id/nombre4"
-                    android:text="@string/pique"
+                    android:text="@string/ronaldo"
                     android:maxLines="3"/>
                 <com.google.android.material.button.MaterialButton
                     android:layout_width="wrap_content"

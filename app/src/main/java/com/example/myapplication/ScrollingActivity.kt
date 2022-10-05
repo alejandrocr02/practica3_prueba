@@ -41,6 +41,7 @@ class ScrollingActivity : AppCompatActivity() {
         image("https://esports.as.com/2022/10/05/league-of-legends/Ibai-anuncio-directo-miercoles-viajando_1617148274_1057116_1440x600.png", binding.content.img)
         image("https://www.elcomercio.com/wp-content/uploads/2022/10/pique-ec-700x391.jpg", binding.content.img2)
         image("https://los40es00.epimg.net/los40/imagenes/2022/09/28/love40/1664353166_313410_1664353306_gigante_normal.jpg", binding.content.img3)
+        image("https://phantom-marca.unidadeditorial.es/e48ab40c7be6330d1c14e4f05a7e757f/resize/660/f/webp/assets/multimedia/imagenes/2022/09/30/16644896975046.jpg", binding.content.img4)
 
     }
 
