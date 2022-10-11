@@ -1,6 +1,8 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.os.Bundle
+import android.net.Uri
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
@@ -10,38 +12,46 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.ImageView
 import com.example.myapplication.databinding.ActivityScrollingBinding
-
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
-
+import com.example.myapplication.CentroComercial
 
 
 class ScrollingActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityScrollingBinding
 
-
-    private fun image(
-        url: String="",
-        imgView: ImageView){
-       Glide.with(this)
-           .load(url)
-           .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
-           .centerCrop()
-           .into(imgView)
-    }
-
-
+    //val openURL = Intent(intent.action)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityScrollingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        image("https://esports.as.com/2022/10/05/league-of-legends/Ibai-anuncio-directo-miercoles-viajando_1617148274_1057116_1440x600.png", binding.content.img)
-        image("https://www.elcomercio.com/wp-content/uploads/2022/10/pique-ec-700x391.jpg", binding.content.img2)
-        image("https://los40es00.epimg.net/los40/imagenes/2022/09/28/love40/1664353166_313410_1664353306_gigante_normal.jpg", binding.content.img3)
-        image("https://phantom-marca.unidadeditorial.es/e48ab40c7be6330d1c14e4f05a7e757f/resize/660/f/webp/assets/multimedia/imagenes/2022/09/30/16644896975046.jpg", binding.content.img4)
+        var bonaire = CentroComercial(1, "Aldaia", "CC Bonaire", "https://agendadeisa.com/wp-content/uploads/2019/11/P3270155-1024x625.jpg", "200")
+        var nuevoCentro = CentroComercial(2, "Valencia", "CC Nuevo Centro", "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Centro_Comercial_Nuevo_Centro.jpg/245px-Centro_Comercial_Nuevo_Centro.jpg", "255")
+        var Aqua = CentroComercial(3, "Valencia", "CC Aqua", "https://agendadeisa.com/wp-content/uploads/2019/11/P3270155-1024x625.jpg", "156")
+        var Arena = CentroComercial(4, "Alboraya", "CC Arena", "https://agendadeisa.com/wp-content/uploads/2021/10/9DxNi4hOSmmB4ERO8KpfA_thumb_abb8-1.jpg", "205")
+
+        binding.content.nombre2.text = bonaire.nombre
+        binding.content.nombre1.text = nuevoCentro.nombre
+        binding.content.nombre3.text = Aqua.nombre
+        binding.content.nombre4.text = Arena.nombre
+
+        binding.content.nombre12.text = bonaire.direccion
+        binding.content.nombre22.text = nuevoCentro.direccion
+        binding.content.nombre32.text = Aqua.direccion
+        binding.content.nombre42.text = Arena.direccion
+
+        binding.content.numtiendas.text = bonaire.numtiendas
+        binding.content.numtiendas2.text = nuevoCentro.numtiendas
+        binding.content.numtiendas3.text = Aqua.numtiendas
+        binding.content.numtiendas4.text = Arena.numtiendas
+
+        image(nuevoCentro.imagen, binding.content.img)
+        image(bonaire.imagen, binding.content.img2)
+        image(Aqua.imagen, binding.content.img3)
+        image(Arena.imagen, binding.content.img4)
 
     }
 
@@ -60,5 +70,15 @@ class ScrollingActivity : AppCompatActivity() {
             R.id.action_settings -> true
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    private fun image(
+        url: String="",
+        imgView: ImageView){
+        Glide.with(this)
+            .load(url)
+            .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
+            .centerCrop()
+            .into(imgView)
     }
 }

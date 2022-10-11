@@ -10,13 +10,13 @@
 
     <LinearLayout
         android:id="@+id/linear1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical">
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layout"
                 android:layout_width="match_parent"
@@ -25,46 +25,51 @@
                 android:layout_marginLeft="@dimen/margin_top"
                 android:layout_marginRight="@dimen/margin_top"
                 >
+
                 <ImageView
                     android:id="@+id/img"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/cardImg"
-                    android:importantForAccessibility="no"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="16dp"
                     android:background="@color/black"
-                    />
-                <TextView
-                    android:id="@+id/nombre"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/nombreIbai"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
-                    app:layout_constraintTop_toBottomOf="@+id/img"
+                    android:importantForAccessibility="no"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    tools:ignore="MissingConstraints" />
                 <TextView
-                    android:id="@+id/descripcion"
+                    android:id="@+id/nombre1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:layout_constraintTop_toBottomOf="@+id/nombre"
-                    android:text="@string/ibai"
-                    android:maxLines="3"/>
-                <com.google.android.material.button.MaterialButton
+                    app:layout_constraintStart_toStartOf="@id/img"
+                    app:layout_constraintBottom_toBottomOf="@id/img"
+                    android:textColor="@color/white"
+                    />
+                <TextView
+                    android:id="@+id/nombre1_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/nombre1"
+                    app:layout_constraintBottom_toTopOf="@id/nombre1"
+                    android:textColor="@color/white"
+                    />
+                <TextView
+                    android:id="@+id/numtiendas"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintTop_toBottomOf="@+id/descripcion"
-                    app:layout_constraintEnd_toEndOf="@+id/descripcion"
-                    android:text="@string/wikipedia"
-                    app:icon="@drawable/ic_link"/>
+                    android:textColor="@color/white"
+                   app:layout_constraintEnd_toEndOf="@id/img"
+                    app:layout_constraintBottom_toBottomOf="@id/img"
+                    />
+
+
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>
-
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layout2"
                 android:layout_width="match_parent"
@@ -81,40 +86,41 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    android:background="#03A9F4"
+                    android:background="@color/black"
                     />
                 <TextView
                     android:id="@+id/nombre2"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/PiqueN"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
-                    app:layout_constraintTop_toBottomOf="@+id/img2"
-
-                    tools:ignore="MissingConstraints" />
-
-                <TextView
-                    android:id="@+id/descripcion2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:maxLines="3"
-                    android:text="@string/pique"
-                    app:layout_constraintTop_toBottomOf="@+id/nombre2"
-                    tools:layout_editor_absoluteX="-16dp" />
-
-                <com.google.android.material.button.MaterialButton
+                    app:layout_constraintStart_toStartOf="@id/img2"
+                    app:layout_constraintBottom_toBottomOf="@id/img2"
+                    android:textColor="@color/white"
+                    />
+                <TextView
+                    android:id="@+id/nombre2_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/nombre2"
+                    app:layout_constraintBottom_toTopOf="@id/nombre2"
+                    android:textColor="@color/white"
+                    />
+                <TextView
+                    android:id="@+id/numtiendas2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintTop_toBottomOf="@+id/descripcion2"
-                    app:layout_constraintEnd_toEndOf="@+id/descripcion2"
-                    android:text="@string/wikipedia"
-                    app:icon="@drawable/ic_link"/>
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="@id/img2"
+                    app:layout_constraintBottom_toBottomOf="@id/img2"
+                    />
+
+
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>
+
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card3"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layout3"
                 android:layout_width="match_parent"
@@ -131,36 +137,41 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    android:background="#03A9F4"
+                    android:background="@color/black"
                     />
                 <TextView
                     android:id="@+id/nombre3"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/RafaN"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
-                    app:layout_constraintTop_toBottomOf="@+id/img3"
-                    tools:ignore="MissingConstraints" />
-                <TextView
-                    android:id="@+id/descripcion3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:layout_constraintTop_toBottomOf="@+id/nombre3"
-                    android:text="@string/rafa"
-                    android:maxLines="3"/>
-                <com.google.android.material.button.MaterialButton
+                    app:layout_constraintStart_toStartOf="@id/img3"
+                    app:layout_constraintBottom_toBottomOf="@id/img3"
+                    android:textColor="@color/white"
+                    />
+                <TextView
+                    android:id="@+id/nombre3_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/nombre3"
+                    app:layout_constraintBottom_toTopOf="@id/nombre3"
+                    android:textColor="@color/white"
+                    />
+                <TextView
+                    android:id="@+id/numtiendas3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintTop_toBottomOf="@+id/descripcion3"
-                    app:layout_constraintEnd_toEndOf="@+id/descripcion3"
-                    android:text="@string/wikipedia"
-                    app:icon="@drawable/ic_link"/>
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="@id/img3"
+                    app:layout_constraintBottom_toBottomOf="@id/img3"
+                    />
+
+
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>
+
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card4"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layout4"
                 android:layout_width="match_parent"
@@ -177,31 +188,34 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    android:background="#03A9F4"
+                    android:background="@color/black"
                     />
                 <TextView
                     android:id="@+id/nombre4"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/CR"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
-                    app:layout_constraintTop_toBottomOf="@+id/img4"
-
-                    tools:ignore="MissingConstraints" />
-                <TextView
-                    android:id="@+id/descripcion4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:layout_constraintTop_toBottomOf="@+id/nombre4"
-                    android:text="@string/ronaldo"
-                    android:maxLines="3"/>
-                <com.google.android.material.button.MaterialButton
+                    app:layout_constraintStart_toStartOf="@id/img4"
+                    app:layout_constraintBottom_toBottomOf="@id/img4"
+                    android:textColor="@color/white"
+                    />
+                <TextView
+                    android:id="@+id/nombre4_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/nombre4"
+                    app:layout_constraintBottom_toTopOf="@id/nombre4"
+                    android:textColor="@color/white"
+                    />
+                <TextView
+                    android:id="@+id/numtiendas4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintTop_toBottomOf="@+id/descripcion4"
-                    app:layout_constraintEnd_toEndOf="@+id/descripcion4"
-                    android:text="@string/wikipedia"
-                    app:icon="@drawable/ic_link"/>
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="@id/img4"
+                    app:layout_constraintBottom_toBottomOf="@id/img4"
+                    />
+
+
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
